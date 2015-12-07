@@ -17,6 +17,7 @@ Time | Session
 12:30 PM - 1:30 PM | _Lunch with special speaker_
 1:30 PM - 2:00 PM | Session 4: _Spring Boot Actuator_
 2:00 PM - 4:00 PM | Session 5: _Spring Cloud Services on Cloud Foundry_
+4:00 PM - 5:00 PM | _Networking with food and drinks_
 
 This is a _loose_ schedule for the day. We will adjust as necessary based on our pace through the material.
 
