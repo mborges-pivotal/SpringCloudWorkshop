@@ -1,25 +1,10 @@
 # Cloud Native Workshop
 Cloud Native Application Architectures with Spring and Cloud Foundry
 
-## Instructor Details
+## Instructors
 - Chris Busch, Sr. Platform Architect, cbusch@pivotal.io
 - Sharath Sahadeven, Sr. Platform Architect, ssahadevan@pivotal.io
 - Brian Jimerson, Advisory Platform Architect, bjimerson@pivotal.io
-
-## Schedule
-
-This is a _loose_ schedule for the day. We will adjust as necessary based on our pace through the material.
-
-The lectures for this class are intentionally very light and are only intended to set the stage for the hands-on labs.
-The overwhelming majority of our time will be spent engaging with the technology directly!
-
-Start by downloading the course materials.  This can be accomplished either through the GitHub website or if you have Git installed, use the following commands:
-
-```
-$ git clone https://github.com/cbusch-pivotal/SpringCloudWorkshop
-$ cd SpringCloudWorkshop/
-$ git fetch --all
-```
 
 ## Agenda
 
@@ -32,6 +17,29 @@ Time | Session
 12:30 PM - 1:30 PM | _Lunch with special speaker_
 1:30 PM - 2:00 PM | Session 4: _Spring Boot Actuator_
 2:00 PM - 4:00 PM | Session 5: _Spring Cloud Services on Cloud Foundry_
+
+This is a _loose_ schedule for the day. We will adjust as necessary based on our pace through the material.
+
+The lectures for this class are intentionally very light and are only intended to set the stage for the hands-on labs.
+The overwhelming majority of our time will be spent engaging with the technology directly!
+
+## Getting started
+
+Start by downloading the course materials.  This can be accomplished either through the GitHub website or if you have Git installed, use the following commands:
+
+```
+$ git clone https://github.com/cbusch-pivotal/SpringCloudWorkshop
+$ cd SpringCloudWorkshop/
+$ git fetch --all
+```
+
+**Prerequisites**
+- [Cloud Foundry CLI](http://info.pivotal.io/p0R00I0eYJ011dAUCN06lR2)
+- [Apache Maven](http://info.pivotal.io/HI002010A6ZlRJR1NeU00eC)
+- [Gradle](http://info.pivotal.io/j10U0e2NI10Rl06AJCf0R00)
+- [Git Client](http://info.pivotal.io/i1RI0AUe6gN00C010l12J0R)
+- An IDE, like [Spring Tool Suite](http://info.pivotal.io/f00RC0N0lh01eU21IAJ260R)
+- [Java SE Development Kit](http://info.pivotal.io/n0I60i3021AN0JU0le10CRR)
 
 ## Course Materials
 
