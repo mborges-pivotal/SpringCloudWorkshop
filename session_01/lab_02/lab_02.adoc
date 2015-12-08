@@ -111,7 +111,7 @@ System-Provided:
 }
 ----
 <1> `VCAP_SERVICES` is a special Cloud Foundry environment variable that contains a JSON document containing all of the information for any services bound to an application.
-<2> Notice here the unique URI for this instance of MySQL that `spring-music` has been bound to.
+<2> Notice here the unique URI for this instance of `cleardb` that `spring-music` has been bound to.
 ====
 
 . Now let's _restage_ the application, which cycles our application back through the staging/buildpack process before redeploying the application.footnote:[In this case, we could accomplish the same goal by only _restarting_ the application via `cf restart spring-music`.
