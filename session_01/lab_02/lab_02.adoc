@@ -79,23 +79,31 @@ The subset of the output we're interested in is located near the very top, title
 System-Provided:
 {
  "VCAP_SERVICES": {
-  "p-mysql": [
+  "cleardb": [
    {
     "credentials": {
-     "hostname": "192.168.8.210",
-     "jdbcUrl": "jdbc:mysql://192.168.8.210:3306/cf_b2eda3d4_9e91_4f81_8b4a_5503c446f02e?user=qwy8eSdKoICCwoK8\u0026password=uu62e0fzn4I02B5W",
-     "name": "cf_b2eda3d4_9e91_4f81_8b4a_5503c446f02e",
-     "password": "uu62e0fzn4I02B5W",
-     "port": 3306,
-     "uri": "mysql://qwy8eSdKoICCwoK8:uu62e0fzn4I02B5W@192.168.8.210:3306/cf_b2eda3d4_9e91_4f81_8b4a_5503c446f02e?reconnect=true",
-     "username": "qwy8eSdKoICCwoK8"
+     "hostname": "us-cdbr-iron-east-03.cleardb.net",
+     "jdbcUrl": "jdbc:mysql://us-cdbr-iron-east-03.cleardb.net/ad_07aab44b118394d?user=b9d29bc3f0f988\u0026password=daf3aa85",
+     "name": "ad_07aab44b118394d",
+     "password": "daf3aa85",
+     "port": "3306",
+     "uri": "mysql://b9d29bc3f0f988:daf3aa85@us-cdbr-iron-east-03.cleardb.net:3306/ad_07aab44b118394d?reconnect=true",
+     "username": "b9d29bc3f0f988"
     },
-    "label": "p-mysql",
+    "label": "cleardb",
     "name": "spring-music-db",
-    "plan": "100mb-dev",
+    "plan": "spark",
     "tags": [
+     "Cloud Databases",
+     "Data Stores",
+     "Developer Tools",
+     "Web-based",
+     "Data Store",
+     "Single Sign-On",
+     "Buyable",
+     "relational",
      "mysql",
-     "relational"
+     "Certified Applications"
     ]
    }
   ]
