@@ -14,11 +14,11 @@ $ cd $COURSE_HOME/session_03/lab_06/initial/cities
 ----
 
 . At present we're still using the in-memory database. Let's connect to a MySQL database service.
-From the CLI, let's _create_ a developer MySQL service instance:
+From the CLI, let's _create_ a developer ClearDB MySQL Database service instance:
 +
 [source,bash]
 ----
-$ cf create-service p-mysql 100mb-dev cities-db
+$ cf create-service cleardb spark cities-db
 Creating service cities-db...
 OK
 ----
@@ -61,12 +61,17 @@ dependencies {
 }
 ----
 +
-Since we've added new dependencies, re-run +./gradlew idea+ or +./gradlew eclipse+ to have them added to the IDE classpath.
+__IMPORTANT__: Since we've added new dependencies, re-run +./gradlew idea+ or +./gradlew eclipse+ to have them added to the IDE classpath.
 
 . Next, let's create the package +org.example.cities.config+ and create in that package the class +CloudDataSourceConfig+. Add the following code:
 +
 [source,java]
 ----
+import org.springframework.cloud.config.java.AbstractCloudConfig;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
+
 @Profile("cloud")
 @Configuration
 public class CloudDataSourceConfig extends AbstractCloudConfig {
@@ -110,7 +115,7 @@ $ cf push
 ----
 $ curl http://cities-crouse-penance.cfapps.io/env
 ...
-VCAP_SERVICES: "{"p-mysql":[{"name":"cities-db","label":"p-mysql","tags":["mysql","relational"],"plan":"100mb-dev","credentials":{"hostname":"192.168.8.210","port":3306,"name":"cf_c35b685f_00e6_43e9_bed0_67210f562dd9","username":"ru6zHmkfacgv6I3p","password":"cGJArKXEcUPBNXer","uri":"mysql://ru6zHmkfacgv6I3p:cGJArKXEcUPBNXer@192.168.8.210:3306/cf_c35b685f_00e6_43e9_bed0_67210f562dd9?reconnect=true","jdbcUrl":"jdbc:mysql://192.168.8.210:3306/cf_c35b685f_00e6_43e9_bed0_67210f562dd9?user=ru6zHmkfacgv6I3p&password=cGJArKXEcUPBNXer"}}]}",
+VCAP_SERVICES: "{"cleardb":[{"name":"cities-db","label":"cleardb","tags":["Cloud Databases","Data Stores","Developer Tools","Web-based","Data Store","Single Sign-On","Buyable","relational","mysql","Certified Applications"],"plan":"spark","credentials":{"jdbcUrl":"jdbc:mysql://us-cdbr-iron-east-03.cleardb.net/ad_5a3615550687288?user=ba02b32c3a2a8b&password=1e5c4921","uri":"mysql://ba02b32c3a2a8b:1e5c4921@us-cdbr-iron-east-03.cleardb.net:3306/ad_5a3615550687288?reconnect=true","name":"ad_5a3615550687288","hostname":"us-cdbr-iron-east-03.cleardb.net","port":"3306","username":"ba02b32c3a2a8b","password":"1e5c4921"}}]}",
 ...
 ----
 The application is now running against a MySQL database.
@@ -121,6 +126,11 @@ The application is now running against a MySQL database.
 +
 [source,java]
 ----
+//additional imports
+import org.springframework.cloud.service.PooledServiceConnectorConfig;
+import org.springframework.cloud.service.relational.DataSourceConfig;
+
+//changed dataSource method
 @Bean
 public DataSource dataSource() {
     PooledServiceConnectorConfig.PoolConfig poolConfig =
@@ -171,3 +181,5 @@ Really delete the service cities-db?> y
 Deleting service cf-scale-boot-logs in org oreilly-class / space instructor as mstine@pivotal.io...
 OK
 ----
+
+link:/README.md#course-materials[Course Materials home] | link:/session_04/lab_07/lab_07.adoc[Lab 7 - Introspection, Monitoring, and Metrics using Spring Boot Actuator]
