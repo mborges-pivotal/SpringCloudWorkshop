@@ -165,7 +165,7 @@ These events are properly interleaved based on time, giving you an accurate pict
 $ cf logs cf-scale-boot
 ----
 +
-You can try various things like refreshing the browser and triggering stop/start events to see logs being generated.
+You can try various things like refreshing the browser and triggering stop/start events to see logs being generated. Stop `cf logs <app_name>` output by pressing Ctrl-C.
 
 === For Operators (OPTIONAL)
 
