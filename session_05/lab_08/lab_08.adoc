@@ -72,9 +72,9 @@ image::../../Common/images/SpringCloudServices.png[]
 +
 image::../../Common/images/ConfigServerUp.png[]
 +
-. Later you will set up your own configuration repository in Github.  For now, enter "https://github.com/mstine/config-repo".
+. Later you will set up your own configuration repository in Github.  For now, enter "https://github.com/cbusch-pivotal/config-repo".
 +
-image::../../Common/images/ConfigServerStine.png[]
+image::../../Common/images/ConfigServerBusch.png[]
 +
 . Go back to the Application Manager console and click "Manage" under "service-registry".  When the service has initialized you should a screen similar to the following:
 +
