@@ -235,3 +235,4 @@ stack: cflinuxfs2
 
 image::/../../Common/images/YourFutureIsUnclear.png[]
 
+link:/README.md#course-materials[Course Materials home] | link:/session_05/lab_09/lab_09.adoc[Lab 9 - Service Registry]
