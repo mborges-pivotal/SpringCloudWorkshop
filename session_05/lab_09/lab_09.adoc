@@ -6,11 +6,10 @@
 image::../../Common/images/AppManager.png[]
 +
 . Click the "Manage" link under the service registry.  
-
-. Click the "Service Registry Dashboard" link.
-+
-image::../../Common/images/ServiceRegistryInstance.png[]
+. Enter your assigned user name, e.g. student10, and the password, if requested.
 +
 . Notice that both the server and UI apps have registered themselves.  Explore the dashboard.
 
 image::../../Common/images/ServiceRegistryDashboard.png[]
+
+link:/README.md#course-materials[Course Materials home] | link:/session_05/lab_10/lab_10.adoc[Lab 10 - Config Server]
