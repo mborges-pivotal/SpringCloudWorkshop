@@ -201,7 +201,7 @@ Creating user provided service cf-scale-boot-logs in org oreilly-class / space i
 OK
 ----
 
-. We bind that service instance like those we created in link:../lab_02/lab_02.adoc[Lab 2]:
+. We bind that service instance like those we created in link:../lab_02/lab_02.adoc[Lab 2] (`cf bs` is short for `cf bind-service`):
 +
 ----
 $ cf bs cf-scale-boot cf-scale-boot-logs
@@ -224,7 +224,9 @@ You can see how to connect to other third-party log management systems in the ht
 
 == Health
 
-Cloud Foundry's http://docs.cloudfoundry.org/concepts/architecture/#hm9k[Health Manager] actively monitors the health of our application processes and will restart them should they crash.
+Cloud Foundry's http://docs.cloudfoundry.org/concepts/architecture/#hm9k[Health Manager] actively monitors the health of our application processes and will restart them should they crash. 
+
+> In this lab, you may want to have two terminal windows open to watch `cf logs` while reviewing `cf events`.
 
 . If you don't have one already running, start a log tail for `cf-scale-boot`:
 +
@@ -259,7 +261,7 @@ Also, if you're paying attention to the log tail, you'll see some interesting lo
 <3> The API logs that an application instance exited due to a crash.
 ====
 
-. Check the application events to see another indicator of the crash:
+. Check the application events to see another indicator of the crash. Do this in another terminal window or exit `cf logs` by pressing Ctrl-C:
 +
 ----
 $ cf events cf-scale-boot
@@ -295,7 +297,7 @@ image::../../Common/images/cf-scale-boot-healed.png[]
 
 Because of the limited quota we have for this course, let's clean up our application and services to make room for future labs.
 
-. Delete the `cf-scale-boot` application:
+. Delete the `cf-scale-boot` application (`cf d` is short for `cf delete`):
 +
 ----
 $ cf d cf-scale-boot
@@ -305,7 +307,7 @@ Deleting app cf-scale-boot in org oreilly-class / space instructor as mstine@piv
 'OK
 ----
 
-. Delete the `cf-scale-boot-logs` service:
+. Delete the `cf-scale-boot-logs` service (`cf ds` is short for `cf delete-service`):
 +
 ----
 $ cf ds cf-scale-boot-logs
