@@ -49,12 +49,13 @@ Binding service cities-db to app cities...
 OK
 ----
 
-. Next we'll add Spring Cloud and MySQL dependencies to our Gradle build. Comment or remove the +hsqldb+ line add add the following in the +dependencies+ section:
+. Next we'll add Spring Cloud and MySQL dependencies to our Gradle build. Comment or remove the +hsqldb+ line and add the following in the +dependencies+ section:
 +
 [source,groovy]
 ----
 dependencies {
     // ....
+    //runtime("org.hsqldb:hsqldb")
     compile("org.springframework.cloud:spring-cloud-spring-service-connector:1.1.0.RELEASE")
     compile("org.springframework.cloud:spring-cloud-cloudfoundry-connector:1.1.0.RELEASE")
     runtime("org.mariadb.jdbc:mariadb-java-client:1.1.7")
