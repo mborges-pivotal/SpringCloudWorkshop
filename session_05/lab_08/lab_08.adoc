@@ -121,91 +121,121 @@ applications:
 +
 ----
 $cf push
-Using manifest file /Users/whewatt/temp/manifest.yml
+Using manifest file /Users/cbusch/git/SpringCloudWorkshop/session_05/lab_08/fortune-teller/manifest.yml
 
-Creating app fortune-service in org whewatt_org / space testing as whewatt@pivotal.io...
+Creating app fortune-service in org instructor-org / space development as instructor...
 OK
 
-Creating route fortunes-cockaded-electrodynamometer.south.fe.pivotal.io...
+Creating route fortunes-odorful-tantalum.pcf3.cloud.fe.pivotal.io...
 OK
 
-Binding fortunes-cockaded-electrodynamometer.south.fe.pivotal.io to fortune-service...
+Binding fortunes-odorful-tantalum.pcf3.cloud.fe.pivotal.io to fortune-service...
 OK
 
 Uploading fortune-service...
-Uploading app files from: /Users/whewatt/temp/fortune-teller-fortune-service/target/fortune-teller-fortune-service-0.0.1-SNAPSHOT.jar
+Uploading app files from: /Users/cbusch/git/SpringCloudWorkshop/session_05/lab_08/fortune-teller/fortune-teller-fortune-service/target/fortune-teller-fortune-service-0.0.1-SNAPSHOT.jar
 Uploading 1.2M, 130 files
-Done uploading               
+Done uploading
 OK
-Binding service fortune-db to app fortune-service in org whewatt_org / space testing as whewatt@pivotal.io...
+Binding service fortune-db to app fortune-service in org instructor-org / space development as instructor...
 OK
-Binding service config-server to app fortune-service in org whewatt_org / space testing as whewatt@pivotal.io...
+Binding service config-server to app fortune-service in org instructor-org / space development as instructor...
 OK
-Binding service service-registry to app fortune-service in org whewatt_org / space testing as whewatt@pivotal.io...
+Binding service service-registry to app fortune-service in org instructor-org / space development as instructor...
 OK
 
-Starting app fortune-service in org whewatt_org / space testing as whewatt@pivotal.io...
------> Downloaded app package (36M)
------> Java Buildpack Version: v3.0 (offline) | https://github.com/cloudfoundry/java-buildpack.git#3bd15e1
------> Downloading Open Jdk JRE 1.8.0_40 from https://download.run.pivotal.io/openjdk/trusty/x86_64/openjdk-1.8.0_40.tar.gz (found in cache)
-       Expanding Open Jdk JRE to .java-buildpack/open_jdk_jre (1.0s)
------> Downloading Spring Auto Reconfiguration 1.7.0_RELEASE from https://download.run.pivotal.io/auto-reconfiguration/auto-reconfiguration-1.7.0_RELEASE.jar (found in cache)
+Starting app fortune-service in org instructor-org / space development as instructor...
+Creating container
+Successfully created container
+Downloading app package...
+Downloaded app package (35.5M)
+No buildpack specified; fetching standard buildpacks to detect and build your application.
+Downloading buildpacks (staticfile_buildpack, java_buildpack_offline, ruby_buildpack, nodejs_buildpack, go_buildpack, python_buildpack, php_buildpack, binary_buildpack)...
+...
+Downloaded buildpacks
+Staging...
+-----> Java Buildpack Version: v3.3.1 (offline) | https://github.com/cloudfoundry/java-buildpack.git#063836b
+-----> Downloading Open Jdk JRE 1.8.0_65 from https://download.run.pivotal.io/openjdk/trusty/x86_64/openjdk-1.8.0_65.tar.gz (found in cache)
+       Expanding Open Jdk JRE to .java-buildpack/open_jdk_jre (1.4s)
+-----> Downloading Open JDK Like Memory Calculator 2.0.0_RELEASE from https://download.run.pivotal.io/memory-calculator/trusty/x86_64/memory-calculator-2.0.0_RELEASE.tar.gz (found in cache)
+       Memory Settings: -Xms382293K -XX:MetaspaceSize=64M -Xmx382293K -XX:MaxMetaspaceSize=64M -Xss995K
+-----> Downloading Spring Auto Reconfiguration 1.10.0_RELEASE from https://download.run.pivotal.io/auto-reconfiguration/auto-reconfiguration-1.10.0_RELEASE.jar (found in cache)
+Exit status 0
+Staging complete
+Uploading droplet, build artifacts cache...
+Uploading droplet...
+Uploading build artifacts cache...
+Uploaded build artifacts cache (107B)
+Uploaded droplet (80.2M)
+Uploading complete
 
------> Uploading droplet (80M)
-
-0 of 1 instances running, 1 starting
-0 of 1 instances running, 1 starting
 0 of 1 instances running, 1 starting
 1 of 1 instances running
 
 App started
 
-
 OK
 
-App fortune-service was started using this command `SERVER_PORT=$PORT $PWD/.java-buildpack/open_jdk_jre/bin/java -cp $PWD/.:$PWD/.java-buildpack/spring_auto_reconfiguration/spring_auto_reconfiguration-1.7.0_RELEASE.jar -Djava.io.tmpdir=$TMPDIR -XX:OnOutOfMemoryError=$PWD/.java-buildpack/open_jdk_jre/bin/killjava.sh -Xmx382293K -Xms382293K -XX:MaxMetaspaceSize=64M -XX:MetaspaceSize=64M -Xss995K org.springframework.boot.loader.JarLauncher`
+App fortune-service was started using this command `CALCULATED_MEMORY=$($PWD/.java-buildpack/open_jdk_jre/bin/java-buildpack-memory-calculator-2.0.0_RELEASE -memorySizes=metaspace:64m.. -memoryWeights=heap:75,metaspace:10,native:10,stack:5 -memoryInitials=heap:100%,metaspace:100% -totMemory=$MEMORY_LIMIT) && SERVER_PORT=$PORT $PWD/.java-buildpack/open_jdk_jre/bin/java -cp $PWD/.:$PWD/.java-buildpack/spring_auto_reconfiguration/spring_auto_reconfiguration-1.10.0_RELEASE.jar -Djava.io.tmpdir=$TMPDIR -XX:OnOutOfMemoryError=$PWD/.java-buildpack/open_jdk_jre/bin/killjava.sh $CALCULATED_MEMORY org.springframework.boot.loader.JarLauncher`
 
-Showing health and status for app fortune-service in org whewatt_org / space testing as whewatt@pivotal.io...
+Showing health and status for app fortune-service in org instructor-org / space development as instructor...
 OK
 
 requested state: started
 instances: 1/1
 usage: 512M x 1 instances
-urls: fortunes-cockaded-electrodynamometer.south.fe.pivotal.io
-last uploaded: Tue Sep 8 16:11:07 UTC 2015
+urls: fortunes-odorful-tantalum.pcf3.cloud.fe.pivotal.io
+last uploaded: Wed Dec 9 02:34:24 UTC 2015
 stack: cflinuxfs2
+buildpack: java-buildpack=v3.3.1-offline-https://github.com/cloudfoundry/java-buildpack.git#063836b java-main open-jdk-like-jre=1.8.0_65 open-jdk-like-memory-calculator=2.0.0_RELEASE spring-auto-reconfiguration=1.10.0_RELEASE
 
-     state     since                    cpu    memory           disk           details   
-#0   running   2015-09-08 12:11:54 PM   0.0%   438.1M of 512M   159.1M of 1G      
-Creating app fortune-ui in org whewatt_org / space testing as whewatt@pivotal.io...
+     state     since                    cpu    memory      disk      details
+#0   running   2015-12-08 08:35:44 PM   0.0%   0 of 512M   0 of 1G
+Creating app fortune-ui in org instructor-org / space development as instructor...
 OK
 
-Creating route fortunes-ui-underdeveloped-caracara.south.fe.pivotal.io...
+Creating route fortunes-ui-literal-adverbial.pcf3.cloud.fe.pivotal.io...
 OK
 
-Binding fortunes-ui-underdeveloped-caracara.south.fe.pivotal.io to fortune-ui...
+Binding fortunes-ui-literal-adverbial.pcf3.cloud.fe.pivotal.io to fortune-ui...
 OK
 
 Uploading fortune-ui...
-Uploading app files from: /Users/whewatt/temp/fortune-teller-ui/target/fortune-teller-ui-0.0.1-SNAPSHOT.jar
+Uploading app files from: /Users/cbusch/git/SpringCloudWorkshop/session_05/lab_08/fortune-teller/fortune-teller-ui/target/fortune-teller-ui-0.0.1-SNAPSHOT.jar
 Uploading 1.1M, 133 files
-Done uploading               
+Done uploading
 OK
-Binding service config-server to app fortune-ui in org whewatt_org / space testing as whewatt@pivotal.io...
+Binding service config-server to app fortune-ui in org instructor-org / space development as instructor...
 OK
-Binding service service-registry to app fortune-ui in org whewatt_org / space testing as whewatt@pivotal.io...
+Binding service service-registry to app fortune-ui in org instructor-org / space development as instructor...
 OK
-Binding service circuit-breaker to app fortune-ui in org whewatt_org / space testing as whewatt@pivotal.io...
+Binding service circuit-breaker to app fortune-ui in org instructor-org / space development as instructor...
 OK
 
-Starting app fortune-ui in org whewatt_org / space testing as whewatt@pivotal.io...
------> Downloaded app package (36M)
------> Java Buildpack Version: v3.0 (offline) | https://github.com/cloudfoundry/java-buildpack.git#3bd15e1
------> Downloading Open Jdk JRE 1.8.0_40 from https://download.run.pivotal.io/openjdk/trusty/x86_64/openjdk-1.8.0_40.tar.gz (found in cache)
-       Expanding Open Jdk JRE to .java-buildpack/open_jdk_jre (1.1s)
------> Downloading Spring Auto Reconfiguration 1.7.0_RELEASE from https://download.run.pivotal.io/auto-reconfiguration/auto-reconfiguration-1.7.0_RELEASE.jar (found in cache)
-
------> Uploading droplet (79M)
+Starting app fortune-ui in org instructor-org / space development as instructor...
+Creating container
+Successfully created container
+Downloading app package...
+Downloaded app package (35M)
+No buildpack specified; fetching standard buildpacks to detect and build your application.
+Downloading buildpacks (staticfile_buildpack, java_buildpack_offline, ruby_buildpack, nodejs_buildpack, go_buildpack, python_buildpack, php_buildpack, binary_buildpack)...
+...
+Downloaded buildpacks
+Staging...
+-----> Java Buildpack Version: v3.3.1 (offline) | https://github.com/cloudfoundry/java-buildpack.git#063836b
+-----> Downloading Open Jdk JRE 1.8.0_65 from https://download.run.pivotal.io/openjdk/trusty/x86_64/openjdk-1.8.0_65.tar.gz (found in cache)
+       Expanding Open Jdk JRE to .java-buildpack/open_jdk_jre (1.4s)
+-----> Downloading Open JDK Like Memory Calculator 2.0.0_RELEASE from https://download.run.pivotal.io/memory-calculator/trusty/x86_64/memory-calculator-2.0.0_RELEASE.tar.gz (found in cache)
+       Memory Settings: -XX:MaxMetaspaceSize=64M -Xss995K -Xms382293K -XX:MetaspaceSize=64M -Xmx382293K
+-----> Downloading Spring Auto Reconfiguration 1.10.0_RELEASE from https://download.run.pivotal.io/auto-reconfiguration/auto-reconfiguration-1.10.0_RELEASE.jar (found in cache)
+Exit status 0
+Staging complete
+Uploading droplet, build artifacts cache...
+Uploading droplet...
+Uploading build artifacts cache...
+Uploaded build artifacts cache (108B)
+Uploaded droplet (79.8M)
+Uploading complete
 
 0 of 1 instances running, 1 starting
 0 of 1 instances running, 1 starting
@@ -213,23 +243,23 @@ Starting app fortune-ui in org whewatt_org / space testing as whewatt@pivotal.io
 
 App started
 
-
 OK
 
-App fortune-ui was started using this command `SERVER_PORT=$PORT $PWD/.java-buildpack/open_jdk_jre/bin/java -cp $PWD/.:$PWD/.java-buildpack/spring_auto_reconfiguration/spring_auto_reconfiguration-1.7.0_RELEASE.jar -Djava.io.tmpdir=$TMPDIR -XX:OnOutOfMemoryError=$PWD/.java-buildpack/open_jdk_jre/bin/killjava.sh -Xmx382293K -Xms382293K -XX:MaxMetaspaceSize=64M -XX:MetaspaceSize=64M -Xss995K org.springframework.boot.loader.JarLauncher`
+App fortune-ui was started using this command `CALCULATED_MEMORY=$($PWD/.java-buildpack/open_jdk_jre/bin/java-buildpack-memory-calculator-2.0.0_RELEASE -memorySizes=metaspace:64m.. -memoryWeights=heap:75,metaspace:10,native:10,stack:5 -memoryInitials=heap:100%,metaspace:100% -totMemory=$MEMORY_LIMIT) && SERVER_PORT=$PORT $PWD/.java-buildpack/open_jdk_jre/bin/java -cp $PWD/.:$PWD/.java-buildpack/spring_auto_reconfiguration/spring_auto_reconfiguration-1.10.0_RELEASE.jar -Djava.io.tmpdir=$TMPDIR -XX:OnOutOfMemoryError=$PWD/.java-buildpack/open_jdk_jre/bin/killjava.sh $CALCULATED_MEMORY org.springframework.boot.loader.JarLauncher`
 
-Showing health and status for app fortune-ui in org whewatt_org / space testing as whewatt@pivotal.io...
+Showing health and status for app fortune-ui in org instructor-org / space development as instructor...
 OK
 
 requested state: started
 instances: 1/1
 usage: 512M x 1 instances
-urls: fortunes-ui-underdeveloped-caracara.south.fe.pivotal.io
-last uploaded: Tue Sep 8 16:12:13 UTC 2015
+urls: fortunes-ui-literal-adverbial.pcf3.cloud.fe.pivotal.io
+last uploaded: Wed Dec 9 02:35:57 UTC 2015
 stack: cflinuxfs2
+buildpack: java-buildpack=v3.3.1-offline-https://github.com/cloudfoundry/java-buildpack.git#063836b java-main open-jdk-like-jre=1.8.0_65 open-jdk-like-memory-calculator=2.0.0_RELEASE spring-auto-reconfiguration=1.10.0_RELEASE
 
-     state     since                    cpu    memory           disk           details   
-#0   running   2015-09-08 12:12:57 PM   0.0%   395.6M of 512M   158.5M of 1G     
+     state     since                    cpu    memory           disk           details
+#0   running   2015-12-08 08:37:22 PM   0.0%   281.2M of 512M   188.9M of 1G
 ----
 
 . Verify that the applications are running by visiting the routes that were generated by the CLI.
