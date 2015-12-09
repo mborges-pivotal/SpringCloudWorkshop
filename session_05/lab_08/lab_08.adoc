@@ -6,7 +6,7 @@
 
 --
 == Using Pivotal's PCF3 cloud foundry instance
-. If you were using http://run,pivotal.io (Pivotal Web Services (PWS) public cloud) in prior labs, then you will need to switch to a PCF instance with the Spring Cloud Services (Config Server, Service Registry, and Circuit Breaker) installed. 
+. If you were using http://run.pivotal.io (Pivotal Web Services (PWS) public cloud) in prior labs, then you will need to switch to a PCF instance with the Spring Cloud Services (Config Server, Service Registry, and Circuit Breaker) installed. 
 
 . PCF3 does have these service available for use in this workshop. Labs 8 - 11 require Spring Cloud Services. In the PCF3 environment, several studentX accounts are available for use. Please see the instructor for your student number assignment before continuing.
 
