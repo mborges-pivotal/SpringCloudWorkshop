@@ -8,3 +8,5 @@ image::../../Common/images/lab9screenshot1.png[]
 . Click the "Manage" link under the service registry. Notice that both the server and UI apps have registered themselves. Explore the dashboard.
 +
 image::../../Common/images/lab9screenshot2.png[]
+
+link:/README.md#course-materials[Course Materials home] | link:/session_05/lab_10/lab_10.adoc[Lab 10 - Config Server]
