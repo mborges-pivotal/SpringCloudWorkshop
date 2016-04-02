@@ -2,9 +2,8 @@
 Cloud Native Application Architectures with Spring and Cloud Foundry
 
 ## Instructors
-- Chris Busch, Sr. Platform Architect, cbusch@pivotal.io
-- Sharath Sahadeven, Sr. Platform Architect, ssahadevan@pivotal.io
-- Brian Jimerson, Advisory Platform Architect, bjimerson@pivotal.io
+- Marcelo Borges,  Platform Architect, mborges@pivotal.io
+- Ed Mikuszewski , Platform Architect, emikuszewski@pivotal.io 
 
 ## Agenda
 
